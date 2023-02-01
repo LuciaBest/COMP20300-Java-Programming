@@ -1,0 +1,30 @@
+<component name="ArtifactManager">
+  <artifact name="SimonRace:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/SimonRace_jar</output-path>
+    <root id="root">
+      <element id="archive" name="SimonRace.jar">
+        <element id="module-output" name="SimonRace" />
+      </element>
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-controls:19" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-controls:win:19" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-fxml:win:19" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-base:win:19" />
+      <element id="library" level="project" name="Maven: org.controlsfx:openjfx-dialogs:1.0.3" />
+      <element id="library" level="project" name="Maven: com.sun.istack:istack-commons-runtime:3.0.8" />
+      <element id="library" level="module" name="JUnit5.8.1" module-name="SimonRace" />
+      <element id="library" level="project" name="Maven: com.sun.xml.fastinfoset:FastInfoset:1.2.16" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-fxml:19" />
+      <element id="library" level="project" name="Maven: jakarta.activation:jakarta.activation-api:1.2.1" />
+      <element id="library" level="project" name="Maven: org.glassfish.jaxb:jaxb-runtime:2.3.2" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-graphics:19" />
+      <element id="library" level="project" name="Maven: org.jvnet.staxex:stax-ex:1.8.1" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-graphics:win:19" />
+      <element id="library" level="project" name="Maven: org.controlsfx:controlsfx:8.0.5" />
+      <element id="library" level="project" name="Maven: org.glassfish.jaxb:txw2:2.3.2" />
+      <element id="library" level="project" name="javafx-swt" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-base:19" />
+      <element id="library" level="module" name="JUnit4" module-name="SimonRace" />
+      <element id="library" level="project" name="Maven: jakarta.xml.bind:jakarta.xml.bind-api:2.3.2" />
+    </root>
+  </artifact>
+</component>

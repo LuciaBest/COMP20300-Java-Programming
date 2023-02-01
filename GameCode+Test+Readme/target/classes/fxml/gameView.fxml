@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19"
+            fx:controller="pers.luyu.simonrace.controller.GameViewController">
+    <children>
+        <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                    prefHeight="400.0" prefWidth="600.0">
+            <top>
+                <HBox prefHeight="308.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                    <Pane prefHeight="308.0" prefWidth="424.0">
+                        <AnchorPane fx:id="gameView">
+                            <children>
+                                <ScrollPane fx:id="showPane" prefHeight="309.0" prefWidth="425.0">
+                                    <content>
+                                        <GridPane fx:id="gameBoard" alignment="CENTER" focusTraversable="true"
+                                                  gridLinesVisible="true" nodeOrientation="LEFT_TO_RIGHT"
+                                                  prefHeight="306.0" prefWidth="410.0" style="-fx-border-width: 1;">
+                                            <padding>
+                                                <Insets left="2.0" top="4.0"/>
+                                            </padding>
+                                        </GridPane>
+                                    </content>
+                                    <opaqueInsets>
+                                        <Insets/>
+                                    </opaqueInsets>
+                                </ScrollPane>
+                            </children>
+                        </AnchorPane>
+                    </Pane>
+                    <VBox prefHeight="294.0" prefWidth="178.0">
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="180.0"
+                               text="Players List" textAlignment="JUSTIFY" textOverrun="CENTER_WORD_ELLIPSIS"
+                               underline="true"/>
+                        <HBox prefHeight="109.0" prefWidth="177.0">
+                            <VBox fx:id="playerCode" prefHeight="108.0" prefWidth="71.0">
+                                <HBox.margin>
+                                    <Insets left="5.0"/>
+                                </HBox.margin>
+                                <Label fx:id="firCode" prefHeight="36.0" prefWidth="94.0"
+                                       style="-fx-border-color: black; -fx-border-width: 1;" text="Player 1">
+                                    <opaqueInsets>
+                                        <Insets/>
+                                    </opaqueInsets>
+                                    <padding>
+                                        <Insets left="5.0"/>
+                                    </padding>
+                                </Label>
+                                <Label fx:id="secCode" prefHeight="36.0" prefWidth="93.0"
+                                       style="-fx-border-color: black; -fx-border-width: 0 1 0 1;" text="Player 2">
+                                    <opaqueInsets>
+                                        <Insets left="3.0"/>
+                                    </opaqueInsets>
+                                    <padding>
+                                        <Insets left="5.0"/>
+                                    </padding>
+                                </Label>
+                                <Label fx:id="thirdCode" prefHeight="36.0" prefWidth="94.0"
+                                       style="-fx-border-color: black; -fx-border-width: 1;" text="Player 3">
+                                    <opaqueInsets>
+                                        <Insets left="3.0"/>
+                                    </opaqueInsets>
+                                    <padding>
+                                        <Insets left="5.0"/>
+                                    </padding>
+                                </Label>
+                            </VBox>
+                            <VBox fx:id="playerNameList" prefHeight="109.0" prefWidth="96.0">
+                                <Label fx:id="firName" prefHeight="36.0" prefWidth="104.0"
+                                       style="-fx-border-color: black; -fx-border-width: 1 1 1 0;" text="Tom">
+                                    <padding>
+                                        <Insets left="8.0"/>
+                                    </padding>
+                                </Label>
+                                <Label fx:id="secName" prefHeight="36.0" prefWidth="104.0"
+                                       style="-fx-border-color: black; -fx-border-width: 0 1 0 0;" text="Jerry">
+                                    <padding>
+                                        <Insets left="8.0"/>
+                                    </padding>
+                                </Label>
+                                <Label fx:id="thirdName" prefHeight="36.0" prefWidth="104.0"
+                                       style="-fx-border-color: black; -fx-border-width: 1 1 1 0;" text="TomAndJerry">
+                                    <padding>
+                                        <Insets left="8.0"/>
+                                    </padding>
+                                </Label>
+                            </VBox>
+                        </HBox>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="180.0"
+                               text="Dice" textAlignment="JUSTIFY" textOverrun="CENTER_WORD_ELLIPSIS" underline="true"/>
+                        <HBox fx:id="dice" prefHeight="36.0" prefWidth="159.0">
+                            <Label prefHeight="36.0" prefWidth="65.0"
+                                   style="-fx-border-color: black; -fx-border-width: 1 0 1 1;" text="Direction">
+                                <padding>
+                                    <Insets left="5.0"/>
+                                </padding>
+                                <HBox.margin>
+                                    <Insets left="2.0"/>
+                                </HBox.margin>
+                            </Label>
+                            <Label fx:id="directionNum" alignment="CENTER" prefHeight="36.0" prefWidth="22.0"
+                                   style="-fx-border-color: black; -fx-border-width: 1 0 1 1;" text="1"/>
+                            <Label prefHeight="36.0" prefWidth="65.0"
+                                   style="-fx-border-color: black; -fx-border-width: 1 0 1 1;" text="Step">
+                                <padding>
+                                    <Insets left="5.0"/>
+                                </padding>
+                            </Label>
+                            <Label fx:id="stepNum" alignment="CENTER" prefHeight="36.0" prefWidth="22.0"
+                                   style="-fx-border-color: black; -fx-border-width: 1 1 1 1;" text="1"/>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="37.0" prefWidth="177.0">
+                            <children>
+                                <Button fx:id="undoButton" disable="true" minHeight="20.0" minWidth="30.0"
+                                        mnemonicParsing="false" prefHeight="20.0" prefWidth="40.0"
+                                        style="-fx-background-color: grey; -fx-font-size: 8;" text="Undo"
+                                        textAlignment="CENTER">
+                                    <font>
+                                        <Font name="System Italic" size="4.0"/>
+                                    </font>
+                                </Button>
+                                <Button fx:id="diceButton" minHeight="20.0" minWidth="30.0" mnemonicParsing="false"
+                                        prefHeight="20.0" prefWidth="40.0"
+                                        style="-fx-background-color: grey; -fx-font-size: 8;" text="Roll"
+                                        textAlignment="CENTER">
+                                    <font>
+                                        <Font name="System Italic" size="4.0"/>
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="10.0"/>
+                                    </HBox.margin>
+                                </Button>
+                            </children>
+                        </HBox>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="177.0"
+                               text="Controller" textAlignment="JUSTIFY" textOverrun="CENTER_WORD_ELLIPSIS"
+                               underline="true"/>
+                        <HBox alignment="CENTER" prefHeight="39.0" prefWidth="177.0">
+                            <Button fx:id="leftButton" disable="true" minHeight="20.0" minWidth="40.0"
+                                    mnemonicParsing="false" prefHeight="20.0" prefWidth="40.0"
+                                    style="-fx-background-color: grey; -fx-font-size: 8;" text="Left"
+                                    textAlignment="CENTER">
+                                <font>
+                                    <Font name="System Italic" size="4.0"/>
+                                </font>
+                            </Button>
+                            <Button fx:id="stayButton" disable="true" minHeight="20.0" minWidth="40.0"
+                                    mnemonicParsing="false" prefHeight="20.0" prefWidth="40.0"
+                                    style="-fx-background-color: grey; -fx-font-size: 8;" text="Stay"
+                                    textAlignment="CENTER">
+                                <font>
+                                    <Font name="System Italic" size="4.0"/>
+                                </font>
+                                <HBox.margin>
+                                    <Insets left="10.0"/>
+                                </HBox.margin>
+                            </Button>
+                            <Button fx:id="rightButton" alignment="CENTER" contentDisplay="CENTER" disable="true"
+                                    minHeight="20.0" minWidth="40.0" mnemonicParsing="false" prefHeight="20.0"
+                                    prefWidth="40.0" style="-fx-background-color: grey; -fx-font-size: 8;" text="Right"
+                                    textAlignment="CENTER">
+                                <font>
+                                    <Font name="System Italic" size="4.0"/>
+                                </font>
+                                <HBox.margin>
+                                    <Insets left="10.0"/>
+                                </HBox.margin>
+                            </Button>
+                        </HBox>
+                    </VBox>
+                </HBox>
+            </top>
+            <bottom>
+                <HBox prefHeight="92.0" prefWidth="552.0" BorderPane.alignment="CENTER">
+                    <HBox prefHeight="92.0" prefWidth="423.0">
+                        <VBox fx:id="console" prefHeight="92.0" prefWidth="285.0">
+                            <Label contentDisplay="RIGHT" prefHeight="30.0" prefWidth="899.0" text="Console"
+                                   textAlignment="JUSTIFY" textOverrun="CENTER_WORD_ELLIPSIS" underline="true">
+                                <VBox.margin>
+                                    <Insets left="5.0"/>
+                                </VBox.margin>
+                            </Label>
+                            <Label fx:id="firConsole" contentDisplay="RIGHT" prefHeight="30.0" prefWidth="233.0"
+                                   textAlignment="JUSTIFY" textOverrun="CENTER_WORD_ELLIPSIS">
+                                <VBox.margin>
+                                    <Insets bottom="2.0" left="5.0" top="2.0"/>
+                                </VBox.margin>
+                                <opaqueInsets>
+                                    <Insets/>
+                                </opaqueInsets>
+                            </Label>
+                            <Label fx:id="secConsole" contentDisplay="RIGHT" prefHeight="30.0" prefWidth="899.0"
+                                   textAlignment="JUSTIFY" textOverrun="CENTER_WORD_ELLIPSIS">
+                                <VBox.margin>
+                                    <Insets left="5.0"/>
+                                </VBox.margin>
+                            </Label>
+                        </VBox>
+                        <VBox prefHeight="92.0" prefWidth="232.0"
+                              style="-fx-border-color: black; -fx-border-width: 0 1 0 1;">
+                            <ScrollPane prefHeight="92.0" prefWidth="238.0">
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="165.0">
+                                    <TableView fx:id="rankList" layoutX="-1.0" prefHeight="200.0" prefWidth="168.0"
+                                               style="-fx-border-color: black; -fx-border-width: 1;">
+                                        <columns>
+                                            <TableColumn fx:id="firRank" prefWidth="40.0" text="Rank"/>
+                                            <TableColumn fx:id="secRank" prefWidth="55.0" text="Name"/>
+                                            <TableColumn fx:id="thirdRank" prefWidth="72.0" text="Grade"/>
+                                        </columns>
+                                    </TableView>
+                                </AnchorPane>
+                            </ScrollPane>
+                        </VBox>
+                    </HBox>
+                    <VBox prefHeight="92.0" prefWidth="183.0">
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="33.0" prefWidth="177.0"
+                               text="Rank" textAlignment="JUSTIFY" textOverrun="CENTER_WORD_ELLIPSIS" underline="true"/>
+                        <HBox alignment="CENTER" prefHeight="41.0" prefWidth="180.0">
+                            <Button fx:id="gradeButton" minHeight="20.0" minWidth="40.0" mnemonicParsing="false"
+                                    prefHeight="20.0" prefWidth="40.0"
+                                    style="-fx-background-color: grey; -fx-font-size: 8;" text="Grade"
+                                    textAlignment="CENTER">
+                                <font>
+                                    <Font name="System Italic" size="4.0"/>
+                                </font>
+                            </Button>
+                            <Button fx:id="stepButton" alignment="CENTER" contentDisplay="CENTER" minHeight="20.0"
+                                    minWidth="40.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="40.0"
+                                    style="-fx-background-color: grey; -fx-font-size: 8;" text="Step"
+                                    textAlignment="CENTER">
+                                <font>
+                                    <Font name="System Italic" size="4.0"/>
+                                </font>
+                                <HBox.margin>
+                                    <Insets left="10.0"/>
+                                </HBox.margin>
+                            </Button>
+                        </HBox>
+                    </VBox>
+                </HBox>
+            </bottom>
+        </BorderPane>
+    </children>
+</AnchorPane>

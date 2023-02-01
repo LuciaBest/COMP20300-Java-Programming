@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import java.lang.String?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="400.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="pers.luyu.simonrace.controller.IndexController">
+    <children>
+        <Button fx:id="startGame" layoutX="259.0" layoutY="357.0" mnemonicParsing="false" onAction="#gameStart"
+                text="Game start!"/>
+        <Label layoutX="193.0" layoutY="98.0" text="Players Number:"/>
+        <TextField fx:id="playerNum" layoutX="306.0" layoutY="94.0" prefHeight="23.0" prefWidth="32.0"/>
+        <Label layoutX="193.0" layoutY="179.0" text="Players Name:"/>
+        <TextField fx:id="playerName1" layoutX="300.0" layoutY="175.0" prefHeight="23.0" prefWidth="45.0"/>
+        <ChoiceBox fx:id="playerSelect" layoutX="193.0" layoutY="211.0" prefHeight="23.0" prefWidth="82.0"/>
+        <Button fx:id="saveName" layoutX="299.0" layoutY="213.0" mnemonicParsing="false" onAction="#saveToName"
+                prefHeight="23.0" prefWidth="45.0" text="Save"/>
+        <CheckBox fx:id="isCustomizeSize" layoutX="18.0" layoutY="98.0" mnemonicParsing="false"
+                  onAction="#isCustomizeToSize" text="Customize board size"/>
+        <Label layoutX="18.0" layoutY="134.0" text="Board row:"/>
+        <TextField fx:id="boardRow" editable="false" layoutX="91.0" layoutY="130.0" prefHeight="23.0" prefWidth="32.0"/>
+        <Label layoutX="18.0" layoutY="168.0" text="Board line:"/>
+        <TextField fx:id="boardLine" editable="false" layoutX="91.0" layoutY="164.0" prefHeight="23.0"
+                   prefWidth="32.0"/>
+        <CheckBox fx:id="isCustomizedObstacles" layoutX="378.0" layoutY="97.0" mnemonicParsing="false"
+                  onAction="#isCustomizedToObstacles" text="Customized obstacles number"/>
+        <Label layoutX="384.0" layoutY="127.0" text="Game difficulty:"/>
+        <ChoiceBox fx:id="difficultySelect" layoutX="379.0" layoutY="155.0" prefHeight="23.0" prefWidth="82.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Easy"/>
+                    <String fx:value="Normal"/>
+                    <String fx:value="Hard"/>
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+        <Label layoutX="380.0" layoutY="196.0" text="Obstacles Number:"/>
+        <Label layoutX="381.0" layoutY="228.0" text="Button"/>
+        <TextField fx:id="buttonNum" editable="false" layoutX="430.0" layoutY="224.0" prefHeight="23.0"
+                   prefWidth="32.0"/>
+        <Label layoutX="476.0" layoutY="228.0" text="Hole"/>
+        <TextField fx:id="holeNum" editable="false" layoutX="525.0" layoutY="224.0" prefHeight="23.0" prefWidth="32.0"/>
+        <Label layoutX="381.0" layoutY="264.0" text="Portal"/>
+        <TextField fx:id="portalNum" editable="false" layoutX="430.0" layoutY="260.0" prefHeight="23.0"
+                   prefWidth="32.0"/>
+        <Label layoutX="476.0" layoutY="264.0" text="Fence"/>
+        <TextField fx:id="fenceNum" editable="false" layoutX="525.0" layoutY="260.0" prefHeight="23.0"
+                   prefWidth="32.0"/>
+        <Label layoutX="445.0" layoutY="301.0" text="Long Fence"/>
+        <TextField fx:id="doubleFenceNum" editable="false" layoutX="525.0" layoutY="297.0" prefHeight="23.0"
+                   prefWidth="32.0"/>
+        <CheckBox fx:id="isPractise" layoutX="16.0" layoutY="201.0" mnemonicParsing="false" text="Practice Mode"/>
+        <Button fx:id="savePlayerNum" layoutX="300.0" layoutY="133.0" mnemonicParsing="false"
+                onAction="#saveToPlayerNum" prefHeight="23.0" prefWidth="45.0" text="Save"/>
+        <CheckBox fx:id="isCustomizedStartPoint" layoutX="15.0" layoutY="236.0" mnemonicParsing="false"
+                  text="Customized Start Point"/>
+        <Label layoutX="228.0" layoutY="34.0" text="Simon’s Race">
+            <font>
+                <Font name="System Italic" size="23.0"/>
+            </font>
+        </Label>
+        <Label fx:id="message1" layoutX="23.0" layoutY="275.0" prefHeight="15.0" prefWidth="345.0" textFill="#fc0606"/>
+        <Label fx:id="message2" layoutX="23.0" layoutY="301.0" prefHeight="15.0" prefWidth="345.0" textFill="#f80202"/>
+        <Label fx:id="message3" layoutX="23.0" layoutY="327.0" prefHeight="15.0" prefWidth="345.0" textFill="#ff0202"/>
+    </children>
+</AnchorPane>
